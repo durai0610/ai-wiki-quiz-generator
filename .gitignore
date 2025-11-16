@@ -1,0 +1,77 @@
+########################################
+#        GLOBAL IGNORE RULES
+########################################
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment variables
+.env
+*.env
+
+########################################
+#        PYTHON / FASTAPI
+########################################
+
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Log files
+*.log
+
+########################################
+#        NODE / REACT / VITE
+########################################
+
+# Node modules
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Vite & Cache
+frontend/.vite/
+frontend/.cache/
+
+# npm / pnpm logs
+npm-debug.log*
+pnpm-debug.log*
+
+########################################
+#        EDITOR IGNORE
+########################################
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+########################################
+#        MISC
+########################################
+
+# Backups
+*.bak
+
+# Temp files
+tmp/
+temp/
+*.tmp
