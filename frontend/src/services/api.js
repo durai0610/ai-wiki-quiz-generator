@@ -1,5 +1,5 @@
 // api.js - service functions to communicate with FastAPI backend
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
+export const API_BASE = import.meta.env.VITE_API_BASE || (import.meta.env.MODE === "development" ? "http://localhost:8000" : "https://your-backend.onrender.com");
 
 async function postGenerateQuiz(url) {
   const resp = await fetch(`${API_BASE}/generate_quiz`, {
