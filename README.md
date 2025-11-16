@@ -106,21 +106,21 @@ ai-quiz-generator/
 
 # 🗄️ Database Setup (PostgreSQL)
 
-1. Create a database
+**1. Create a database**
 
 ```bash
 psql -U postgres
 CREATE DATABASE quizzesdb;
 ```
 
-2. Add your DB URL into ```.env```
+**2. Add your DB URL into ```.env```**
 
 ```bash
 DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/quizzesdb
 GEMINI_API_KEY=your_api_key_here
 ```
 
-3. FastAPI auto-creates the table from database.py
+**3. FastAPI auto-creates the table from database.py**
 
 No manual migration needed.
 
@@ -128,25 +128,25 @@ No manual migration needed.
 
 # ▶️ Run the Backend
 
-1. Create virtual environment
+**1. Create virtual environment**
 
 ```bash
 python -m venv venv
 ```
 
-2. Activate it
+**2. Activate it**
 
-Windows
+For Windows
 ```bash
 venv\Scripts\activate
 ```
 
-3. Install dependencies
+**3. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Start FastAPI server
+**4. Start FastAPI server**
 ```bash
 uvicorn main:app --reload
 ```
@@ -159,12 +159,12 @@ http://127.0.0.1:8000
 
 # 🌐 Run the Frontend
 
-1. Install packages
+**1. Install packages**
 ```bash
 npm install
 ```
 
-2. Start React dev server
+**2. Start React dev server**
 ```bash
 npm run dev
 ```
@@ -178,11 +178,11 @@ http://localhost:5173
 
 # 📡 API Endpoints
 
-1. Generate Quiz
+**1. Generate Quiz**
 
 POST ```/generate_quiz```
 
-Request:
+**Request**:
 
 ```bash
 {
@@ -190,7 +190,7 @@ Request:
 }
 ```
 
-Response:
+**Response**:
 ```bash
 {
   "id": 1,
@@ -201,11 +201,11 @@ Response:
 }
 ```
 
-2. Get History
+**2. Get History**
 
 GET ```/history```
 
-3. Get Quiz By ID
+**3. Get Quiz By ID**
 
 GET ```/quiz/{id}```
 
@@ -228,8 +228,6 @@ http://127.0.0.1:8000/docs
 # 📝 Notes
 
 * Quiz count varies based on LLM output — this is normal.
-
-* Time shown is UTC; you can convert to IST in frontend if needed.
-
+  
 * Database resets only if you delete the db or change DB name.
 
